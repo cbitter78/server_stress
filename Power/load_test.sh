@@ -6,5 +6,7 @@ CPU_LOAD="${1:-$DEFAULT_CPU_LOAD_PERCENT}"
 DEFAULT_TIMEOUT_SECONDS=300
 TIMEOUT="${2:-$DEFAULT_TIMEOUT}"
 
+echo "Load testing at $CPU_LOAD% for $TIMEOUT seconds"
+
 stress-ng --cpu 0 --cpu-load $CPU_LOAD --cpu-method loop --timeout $TIMEOUT --metrics --vm-bytes 1G &
 fio 4k_8disk.fio --timeout=$TIMEOUT &
