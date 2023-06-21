@@ -5,7 +5,6 @@ direct=1
 ioengine=libaio
 group_reporting
 time_based
-runtime=120
 numjobs=2
 name=ios-test-job
 rw=randread
