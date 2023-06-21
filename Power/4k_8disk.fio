@@ -6,7 +6,7 @@ ioengine=libaio
 group_reporting
 time_based
 runtime=120
-numjobs=12
+numjobs=1
 name=ios-test-job
 rw=randread
 
