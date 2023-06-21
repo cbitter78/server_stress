@@ -1,10 +1,9 @@
 #! /bin/sh
 
-stress-ng --cpu 0 --cpu-load 99 --cpu-method loop \
- --timeout 30 --metrics -vm-bytes 1G&
+stress-ng --cpu 0 --cpu-load 99 --cpu-method loop --timeout 30 --metrics -vm-bytes 1G&
 
 
-fio 
+fio \
 --filename=/dev/nvme2n1 \
 --filename=/dev/nvme3n1 \
 --filename=/dev/nvme4n1 \
@@ -21,7 +20,7 @@ fio
 --numjobs=4 \
 --eta-newline=1 &
 
-fio 
+fio \
 --filename=/dev/nvme2n1 \
 --filename=/dev/nvme3n1 \
 --filename=/dev/nvme4n1 \
@@ -38,7 +37,7 @@ fio
 --numjobs=4 \
 --eta-newline=1 &
 
-fio 
+fio \
 --filename=/dev/nvme2n1 \
 --filename=/dev/nvme3n1 \
 --filename=/dev/nvme4n1 \
@@ -55,7 +54,7 @@ fio
 --numjobs=4 \
 --eta-newline=1 &
 
-fio 
+fio \
 --filename=/dev/nvme2n1 \
 --filename=/dev/nvme3n1 \
 --filename=/dev/nvme4n1 \
