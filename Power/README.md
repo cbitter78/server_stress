@@ -11,3 +11,9 @@ After you have booted the host and it has a generic internet connection you will
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/cbitter78/server_stress/main/Power/setup.sh)"
 
 ```
+
+```shell
+
+wget -q -O - "https://raw.githubusercontent.com/cbitter78/server_stress/main/Power/setup.sh" | /bin/bash
+
+```
