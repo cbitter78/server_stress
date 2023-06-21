@@ -1,2 +1,2 @@
 apt-get update
-apt-get install git stress-ng sysstat fio
+apt-get install -y curl git stress-ng sysstat fio
