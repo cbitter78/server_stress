@@ -1,6 +1,6 @@
 #! /bin/sh
 
-stress-ng --cpu 0 --cpu-load 99 --cpu-method loop --timeout 30 --metrics -vm-bytes 1G&
+stress-ng --cpu 0 --cpu-load 99 --cpu-method loop --timeout 30 --metrics --vm-bytes 1G &
 
 
 fio \
@@ -18,7 +18,8 @@ fio \
 --iodepth=256 \
 --runtime=60 \
 --numjobs=4 \
---eta-newline=1 &
+--eta-newline=1 \
+--name=iops-test-job &
 
 fio \
 --filename=/dev/nvme2n1 \
